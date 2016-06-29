@@ -1,0 +1,166 @@
+<!-- Copyright 2015 Pradeep Vemulakonda
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not
+use this file except in compliance with the License. You may obtain a copy
+of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.
+ --><div class="row detailed-charts">
+      <div class="no-class">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-bar-chart-o fa-fw"></i> <strong>Response time vs Sample</strong>
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    Actions
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="#" class="print" data-toggle="modal" data-target="#myModal"><i class="fa fa-print fa-fw"></i>&nbsp; Print</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel-heading -->
+                    <div class="panel-body">
+                        <div class="bar-chart"></div>
+                        <div>
+                            <a class="btn btn-primary" data-toggle="collapse" href="#legendCollapse" aria-expanded="false" aria-controls="collapseExample">
+                              legend
+                            </a>
+                        </div>
+                        <div class="collapse" id="legendCollapse">
+                          <div class="well">
+                             <a class="btn btn-primary clear">
+                                     clear
+                             </a>
+                             <svg class="chart-bar-legend"></svg>
+                          </div>
+                        </div>
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-line-chart fa-fw"></i> Response time vs Active Number of threads
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    Actions
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                    <li><a href="#" class="print" data-toggle="modal" data-target="#myModal"><i class="fa fa-print fa-fw"></i>&nbsp; Print</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="line-chart" class="line-chart">
+                        </div>
+                            <div>
+                                <a class="btn btn-primary" data-toggle="collapse" href="#legendCollapse1" aria-expanded="false" aria-controls="collapseExample">
+                                  legend
+                                </a>
+                            </div>
+                            <div class="collapse" id="legendCollapse1">
+                                <div class="well">
+                                  <a class="btn btn-primary clear">
+                                     clear
+                                  </a>
+                                 <svg class="chart-line-legend"></svg>
+                                </div>
+                            </div>
+                    </div>
+                </div>
+
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <i class="fa fa-line-chart fa-fw"></i> Active No of threads vs Time
+                        <div class="pull-right">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                                    Actions
+                                    <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu pull-right" role="menu">
+                                   <li><a href="#" class="print" data-toggle="modal" data-target="#myModal"><i class="fa fa-print fa-fw"></i>&nbsp; Print</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-body">
+                        <div id="line-chart-2" class="line-chart-2">
+                        </div>
+                            <div>
+                                <a class="btn btn-primary" data-toggle="collapse" href="#legendCollapse2" aria-expanded="false" aria-controls="collapseExample">
+                                  legend
+                                </a>
+                            </div>
+                            <div class="collapse" id="legendCollapse2">
+                              <div class="well">
+                                  <a class="btn btn-primary clear">
+                                     clear
+                                  </a>
+                                 <svg class="chart-line-2-legend"></svg>
+                              </div>
+                            </div>
+                    </div>
+                </div>
+			</div>
+	</div>
+  <div class="row comparison-charts">
+   <div class="panel panel-default">
+      <div class="panel-heading">
+          <i class="fa fa-bar-chart-o fa-fw"></i> <strong>Compare View</strong>
+          <div class="pull-right">
+              <div class="btn-group">
+                  <button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">
+                      Actions
+                      <span class="caret"></span>
+                  </button>
+                  <ul class="dropdown-menu pull-right" role="menu">
+                      <li><a href="#" class="print" data-toggle="modal" data-target="#myModal"><i class="fa fa-print fa-fw"></i>&nbsp; Print</a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <!-- /.panel-heading -->
+      <div class="panel-body compare-chart">
+          <div class="bar-chart-term"></div>
+      <!-- /.panel-body -->
+      </div>
+
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Print Preview</h4>
+      </div>
+      <div class="modal-body">
+        <canvas id="canvas"></canvas>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <a class="print-image btn btn-primary">Save Image</a>
+      </div>
+    </div>
+  </div>
+</div>

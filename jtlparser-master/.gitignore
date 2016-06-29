@@ -1,0 +1,17 @@
+# Eclipse
+.classpath
+.project
+.settings/
+
+# IntelliJ
+.idea
+
+# Mac
+.DS_Store
+
+# Maven
+log/
+target/
+
+# Jenkins
+work/
